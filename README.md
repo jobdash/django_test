@@ -4,8 +4,8 @@ Backend Test
 This test includes two parts.
 
 1) Create a simple Django todo list application.  It should be contained in
-   a folder called `ToDo`.  This application should have a page that at the top
-   allows you to save text input to a new todo and then beneath the input lists
+   a folder called `ToDo`.  This application should have a page that, at the top,
+   allows you to save text input to a new todo item and then beneath that input lists
    all unfinished todos.  Additionally, you should be able to mark a todo item
    as done.
 
