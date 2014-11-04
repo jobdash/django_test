@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo App</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'todoapp/style.css' %}" type="text/css" media="screen" charset="utf-8">    
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <label for="new-task">add new task</label><input id="new-task" type="text"><button>submit</button>
+      </p>
+      
+      <h3>Tasks</h3>
+      {% for task in tasks %}
+      <ul id="incomplete-tasks">
+        <li>
+          <label>{{task.task_text}}</label>
+          <input type="checkbox" id='{{task.task_status}}'>
+        </li> 
+      </ul>
+      {% endfor %}
+
+
+  </body>
+</html>
