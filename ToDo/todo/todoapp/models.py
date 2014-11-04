@@ -7,5 +7,6 @@ class Task(models.Model):
     task_status = models.BooleanField(default=False)    #mark as done / default incomplete
     def __str__(self):
         return self.task_text
+        return self.task_status
 
 # list of unfinished todos
