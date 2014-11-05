@@ -32,4 +32,4 @@ This test includes two parts.
    }
    ```
 
-   You may assume the input will only contain words and standard punctuation.
+   You may assume the input will only contain words and standard punctuation
