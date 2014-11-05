@@ -5,8 +5,9 @@ from django.db import models
 class Task(models.Model):
     task_text = models.CharField(max_length=75)         #input for the task
     task_status = models.BooleanField(default=False)    #mark as done / default incomplete
+    task_input = forms.CharField(label='task to do')
+    
     def __str__(self):
         return self.task_text
-        return self.task_status
 
 # list of unfinished todos

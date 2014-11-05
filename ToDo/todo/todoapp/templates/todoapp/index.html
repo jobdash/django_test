@@ -13,14 +13,14 @@
       </p>
       
       <h3>Tasks</h3>
-      {% for task in tasks %}
+      <!-- one id {% for task in tasks %} -->
       <ul id="incomplete-tasks">
-        <li>
+        <li {% for task in tasks %}>
           <label>{{task.task_text}}</label>
           <input type="checkbox" id='{{task.task_status}}'>
-        </li> 
+        </li {% end for %}> 
       </ul>
-      {% endfor %}
+      <!--{% endfor %}-->
 
 
   </body>
