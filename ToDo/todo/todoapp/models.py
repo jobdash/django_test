@@ -11,7 +11,9 @@ class Task(models.Model):
     def __str__(self):
         return self.task_text
 
-# list of unfinished todos
-
+# Submit new task
 class TaskForm(forms.Form):
     task_submit = forms.CharField(label='new task', max_length=75)
+
+    def __str__(self)
+        return self.task_submit
