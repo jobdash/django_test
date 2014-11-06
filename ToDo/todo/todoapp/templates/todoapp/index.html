@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo App</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'todoapp/style.css' %}" type="text/css" media="screen" charset="utf-8">    
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <form>
+        <input id="task_text" type="text" placeholder='add new task'><button id='task_submit'>submit</button>
+        </form>
+      </p>
+
+<!--       <form action="/todoapp/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" />
+      </form> -->
+      
+      <h3>Tasks</h3>
+      {% for task in tasks %}
+      <ul id="incomplete-tasks">
+        <li>
+          <label>{{task.task_text}}</label>
+          <input type="checkbox" id='{{task.task_status}}'>
+        </li> 
+      </ul>
+      {% endfor %}
+
+
+  </body>
+</html>
