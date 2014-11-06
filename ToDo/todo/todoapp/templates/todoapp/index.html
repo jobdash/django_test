@@ -9,8 +9,16 @@
   <body>
     <div class="container">
       <p>
-        <label for="new-task">add new task</label><input id="new-task" type="text"><button>submit</button>
+        <form>
+        <input id="task_submit" type="text" placeholder='add new task'><button>submit</button>
+        </form>
       </p>
+
+<!--       <form action="/todoapp/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" />
+      </form> -->
       
       <h3>Tasks</h3>
       {% for task in tasks %}

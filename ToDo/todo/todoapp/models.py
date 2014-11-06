@@ -12,3 +12,6 @@ class Task(models.Model):
         return self.task_text
 
 # list of unfinished todos
+
+class TaskForm(forms.Form):
+    task_submit = forms.CharField(label='new task', max_length=75)
