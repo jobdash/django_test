@@ -1,4 +1,6 @@
 from django.db import models
+from django import forms
+
 
 class Task(models.Model):
     task_name = models.CharField(max_length=100)
@@ -7,5 +9,10 @@ class Task(models.Model):
     def __unicode__(self):
         return self.task_name
 
-    # def is_complete(self):
-    #     return self.task_complete
+
+
+class TaskForm(forms.ModelForm):
+
+    class Meta:
+        model = Task
+        fields = ['task_name']
