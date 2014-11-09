@@ -1,0 +1,21 @@
+<h1>To Do List</h1>
+
+
+<h3>Create a Task:</h3>
+<form action="/task_list/get_task/" method="post">
+{% csrf_token %}
+	<input id="task_name" type="text" name="task_name">
+	<input type="submit" value="Submit">
+</form>
+
+
+
+{% if list_of_tasks %}
+<h3>List of Tasks to Complete:</h3>
+    <ul>
+    {% for task in list_of_tasks %}
+        <li style="font-size">{{ task.task_name }}&nbsp; &nbsp; <a style="font-size:12px" href="/task_list/{{ task.id }}/complete">[Complete Task]</a></li>
+    {% endfor %}
+    </ul>
+
+{% endif %}

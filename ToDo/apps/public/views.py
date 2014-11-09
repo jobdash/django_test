@@ -14,17 +14,25 @@ def task_list(request):
     })
     return HttpResponse(template.render(context))
 
+
 def get_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-            task_name = form.cleaned_data['task_name']
             form.save()
             return HttpResponseRedirect('/task_list')
+
         else:
             return HttpResponse("Not a valid task name. <a href='/task_list'>Click Here to try again</a>")
 
     else:  # creates a blank form if receiving a non-POST request
         form = TaskForm()
 
-    return render(request, 'index.html', {'form': form})
+    return HttpResponseRedirect("/task_list")
+
+
+def complete_task(request, task_id):
+    task = Task.objects.get(pk=task_id)
+    task.task_complete = True
+    task.save()
+    return HttpResponseRedirect('/task_list')
