@@ -6,7 +6,6 @@ from apps.public.models import Task, TaskForm
 
 
 def task_list(request):
-
     list_of_tasks = Task.objects.filter(task_complete=False)
     template = loader.get_template('public/index.html')
     context = RequestContext(request, {
@@ -22,7 +21,7 @@ def get_task(request):
             form.save()
             return HttpResponseRedirect('/task_list')
 
-        else:
+        else:  # mostly to prevent blank responses, but will prevent other problematic inputs if they exist
             return HttpResponse("Not a valid task name. <a href='/task_list'>Click Here to try again</a>")
 
     else:  # creates a blank form if receiving a non-POST request

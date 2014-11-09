@@ -9,17 +9,16 @@ split_string = long_string.split()
 
 
 for word in split_string:
-	word_check = word  #word_check looks for punctuation, we are free to change word
 
-	if word_check[0] in punctuation:  #checks for punctuation at the beginning of a word and removes it
-		word_check = word_check[1: len(word_check)]
+	if word[0] in punctuation:  #checks for punctuation at the beginning of a word and removes it
+		word = word[1: len(word)]
 
-	if word_check[len(word_check) -1] in punctuation:  #checks for punctuation at the end of a word and removes it
-		word_check = word_check[:len(word_check) - 1]
+	if word[len(word) -1] in punctuation:  #checks for punctuation at the end of a word and removes it. Mostly for removing unnecessary punctuation 
+		word = word[:len(word) - 1]
 
-	if word_check in word_cloud.keys():
-		word_cloud[word_check] += 1
+	if word in word_cloud.keys():
+		word_cloud[word] += 1
 	else:
-		word_cloud[word_check] = 1
+		word_cloud[word] = 1
 
 print word_cloud
