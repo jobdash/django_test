@@ -2,6 +2,8 @@ Requirments for django_test project (djtp)
 ==========================================
 
 ### Project Directory Structure:
+
+<pre>
  /some/path/to/django_test/
     logs/ - place any logs here (git ignored)
     djtp_virutalenv/ - virtualenv should be installed here (git ignored)
@@ -9,6 +11,7 @@ Requirments for django_test project (djtp)
     socket/ - if you are using gunicorn, place its socketfile here (git ignored)
     docs/ - let people know the good things you have done
     dbs/ - put your local databases here (git ignored)
+</pre>
 
 ### Python OS Packages:
 * pip
