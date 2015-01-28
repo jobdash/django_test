@@ -1,0 +1,6 @@
+to_do/dbs
+to_do/djtp_virtualenv
+to_do/sockets
+to_do/source/static
+*.pyc
+*.swp*

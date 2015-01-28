@@ -9,6 +9,8 @@ This test includes two parts.
    all unfinished todos.  Additionally, you should be able to mark a todo item
    as done.
 
+   This is found in the 'to_do' directory.
+
 
 2) Write a stand alone Python script that creates word clouds.  To do this,
    you'll first need to build the data. Write code that takes a long string and
@@ -33,3 +35,5 @@ This test includes two parts.
    ```
 
    You may assume the input will only contain words and standard punctuation.
+
+   This is found in the 'word_cloud' directory.
